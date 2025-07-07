@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <style>
+        img {
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div> checking working properly or not. </div>
+    <div>
+        <h2><i>welcome @<%= info.name %> to your instagram page</i></h2>
+        <hr>
+        <h3>
+            <span> <u>Followers </u>:
+                <%= info.followers %>
+            </span>
+            &nbsp; &nbsp; &nbsp; &nbsp;
+            <span> <u>Following </u>:
+                <%= info.following %>
+            </span>
+        </h3>
+        <hr>
+        <h3>Posts</h3>
+        <% for(let i of info.posts) { %>
+            <spam>
+                <img src="<%= i.image %>">
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                <p>Likes : <%= i.likes %>
+
+                        &nbsp; &nbsp;
+                        Comments : <%= i.comments %>
+                </p>
+                <% } %>
+            </spam>
+    </div>
+</body>
+
+</html>
