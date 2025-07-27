@@ -14,6 +14,7 @@ app.get("/id/:username", (req, res) => {
   const data = require("./data.json");
   let name = req.params.username;
   let info = data[name];
+
   if (info) {
     res.render("instagram.ejs", { info });
   } else {
